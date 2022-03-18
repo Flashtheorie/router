@@ -32,7 +32,7 @@
 	<span> <h1><small>Vous êtes sur la page </small><?php echo $request; ?> </h1></span>
 
 <code>
-	    case '/router/home' : <br>
+	    case '<?php echo $request; ?>' : <br>
         include 'views/home.php'; <br>
         break;
 </code>

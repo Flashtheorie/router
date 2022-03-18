@@ -30,6 +30,11 @@
 
 	<span> <h1><small>Vous êtes sur la page </small><?php echo $request; ?> </h1></span>
 
+<code>
+	    case '<?php echo $request; ?>' : <br>
+        include 'views/about.php'; <br>
+        break;
+</code>
 
 
 

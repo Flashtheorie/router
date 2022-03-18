@@ -31,16 +31,11 @@
 
 	<span> <h1><small>Vous êtes sur la page </small><?php echo $request; ?> </h1></span>
 
-<form action="" method="POST" style="width: 50%" class="jumbotron">
-	<label for="login">Username :</label>
-	<input type="text" id="login" class="form-control" autocomplete="false">
-
-	<label for="password">Password :</label>
-	<input type="password" id="password" class="form-control">
-
-<hr>
-<input type="submit" value="Login" class="btn btn-hg btn-danger">
-</form>
+<code>
+	    case '<?php echo $request; ?>' : <br>
+        include 'views/login.php'; <br>
+        break;
+</code>
 
 
 
