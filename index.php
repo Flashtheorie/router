@@ -5,16 +5,16 @@ $request = $_SERVER['REQUEST_URI'];
 
 
 switch ($request) {
-    case '/router/home' :
+    case '/Projetsactuels/router/home' :
         include 'views/home.php';
         break;
-    case '/router/' :
+    case '/Projetsactuels/router/' :
         include 'views/home.php';
         break;
-    case '/router/about' :
+    case '/Projetsactuels/router/about' :
         include 'views/about.php';
         break;
-    case '/router/login' :
+    case '/Projetsactuels/router/login' :
         include 'views/login.php';
         break;
     default:
