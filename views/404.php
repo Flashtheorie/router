@@ -32,8 +32,9 @@
 	<span> <h1>PAGE NON TROUVEE</h1></span>
 
 <code>
+
 	    case '<?php echo $request; ?>' : <br>
-        include 'views/404.php'; <br>
+        include '/views/404.php'; <br>
         break;
 </code>
 

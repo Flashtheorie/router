@@ -33,7 +33,7 @@
 
 <code>
 	    case '<?php echo $request; ?>' : <br>
-        include 'views/login.php'; <br>
+        include '/views/login.php'; <br>
         break;
 </code>
 

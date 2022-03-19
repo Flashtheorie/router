@@ -32,8 +32,12 @@
 	<span> <h1><small>Vous êtes sur la page </small><?php echo $request; ?> </h1></span>
 
 <code>
-	    case '<?php echo $request; ?>' : <br>
-        include 'views/home.php'; <br>
+Le fait d'aller sur <strong>/home</strong> affiche la page <strong>/views/home.php</strong>
+</code>
+<hr>
+<code>
+	    case '/Projetsactuels/router/home' : <br>
+        require 'views/home.php'; <br>
         break;
 </code>
 
