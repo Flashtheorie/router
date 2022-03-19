@@ -1,3 +1,6 @@
+<?php session_start();?>
+
+
 <script src="https://kit.fontawesome.com/2fc09f2ce5.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/7ab095b2cf.js" crossorigin="anonymous"></script>
@@ -8,8 +11,8 @@
 
 <script src="../scripts/highlight.js"></script>
 <script>hljs.highlightAll();</script>
-
-<nav class="navbar navbar-inverse navbar-expand-lg" role="navigation">
+<?php if (!isset($_SESSION['id'])): ?>
+  <nav class="navbar navbar-inverse navbar-expand-lg" role="navigation">
   <a class="navbar-brand" href="home">TestRouter</a>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-01"></button>
   <div class="collapse navbar-collapse" id="navbar-collapse-01">
@@ -24,3 +27,22 @@
 
   </div><!-- /.navbar-collapse -->
 </nav><!-- /navbar -->
+<?php endif ?>
+
+<?php if (isset($_SESSION['id'])): ?>
+  <nav class="navbar navbar-inverse navbar-expand-lg" role="navigation">
+  <a class="navbar-brand" href="home">TestRouter</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-01"></button>
+  <div class="collapse navbar-collapse" id="navbar-collapse-01">
+    <ul class="nav navbar-nav mr-auto">
+      <li><a href="home">Home</a></li>
+      <li><a href="logout">Logout</a></li>
+      
+    </ul>
+    
+    <p class="navbar-text navbar-right"><li><a href="about">Connecté en tant que n°<?php echo $_SESSION['id']; ?></a></li></p>
+
+
+  </div><!-- /.navbar-collapse -->
+</nav><!-- /navbar -->
+<?php endif ?>

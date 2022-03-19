@@ -41,8 +41,14 @@ Le fait d'aller sur <strong>/home</strong> affiche la page <strong>/views/home.p
         break;
 </code>
 
+<br> <hr>
+<?php if (isset($_SESSION['id'])): ?>
+	Connecté en tant que <?php echo $_SESSION['id']; ?>
+<?php endif ?>
 
-
+<?php if (!isset($_SESSION['id'])): ?>
+<a href="createSession" class="btn btn-hg btn-info">Tester avec la session</a>
+<?php endif ?>
 
 </div>
 
